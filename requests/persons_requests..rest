@@ -1,0 +1,32 @@
+@hostname = http://localhost:3001
+
+
+GET {{hostname}}/api/persons
+
+###
+GET {{hostname}}/info
+
+###
+GET {{hostname}}/api/persons/62ec18379f18db561cb31320
+
+###
+POST {{hostname}}/api/persons
+Content-Type: application/json
+
+{
+     "name": "Arto Hellas",
+    "number": "040-123456"
+}
+
+###
+PUT {{hostname}}/api/persons/62ec18379f18db561cb31320
+Content-Type: application/json
+
+{
+    "name": "Arto Hellas",
+    "number": "040-654321"
+}
+
+
+###
+DELETE {{hostname}}/api/persons/62ec18379f18db561cb31320
